@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post">
+  <input name="age" placeholder="Age" class="form-control" required>
+  <input name="gender" placeholder="Gender" class="form-control mt-2" required>
+  <input name="history" placeholder="Medical History" class="form-control mt-2">
+  <input name="symptoms" placeholder="Symptoms" class="form-control mt-2">
+  <button class="btn btn-info mt-2">Get Plan</button>
+</form>
+
+{% if plan %}
+  <div class="mt-4">
+    <h5>Recommended Plan:</h5>
+    <ul>
+      {% for item in plan %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+{% endblock %}

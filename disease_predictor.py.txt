@@ -1,0 +1,7 @@
+def predict_disease(symptoms):
+    symptoms = symptoms.lower()
+    if "fever" in symptoms and "cough" in symptoms:
+        return ["Flu", "Common Cold"]
+    elif "rash" in symptoms:
+        return ["Skin Allergy", "Chickenpox"]
+    return ["Condition not recognized"]

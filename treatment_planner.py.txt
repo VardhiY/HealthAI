@@ -1,0 +1,10 @@
+def get_plan(age, gender, history, symptoms):
+    plan = []
+    if age < 12:
+        plan.append("Give fluids and paracetamol")
+    if "asthma" in history.lower():
+        plan.append("Avoid dust and cold air")
+    if "fever" in symptoms.lower():
+        plan.append("Use a cold compress and rest")
+    plan.append("Consult a doctor if symptoms persist")
+    return plan

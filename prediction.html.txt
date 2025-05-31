@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post">
+  <input type="text" name="symptoms" placeholder="Enter symptoms (e.g. fever, cough)" class="form-control">
+  <button class="btn btn-success mt-2">Predict</button>
+</form>
+{% if result %}
+  <div class="alert alert-warning mt-3">Possible conditions: {{ result }}</div>
+{% endif %}
+{% endblock %}
